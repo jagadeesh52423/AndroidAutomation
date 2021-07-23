@@ -1,0 +1,16 @@
+from enum import Enum, auto
+
+
+class SummonerButtons(Enum):
+    GAME = (0, 0),
+    ACHIEVEMENTS = auto(),
+    SELLER_BUY = auto(),
+    SELLER_OKAY = auto(),
+    MONITOR_REJECT = auto(),
+    WATCHER = auto(),
+    ACHIEVEMENTS_CLOSE = auto(),
+    ORBS = auto(),
+    ORBS_CLOSE = auto(),
+    COMPLETE_CONTINUE = auto(),
+    NEW_GAME = auto(),
+    NEW_GAME_CONFIRM = auto()
