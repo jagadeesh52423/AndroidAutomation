@@ -10,4 +10,6 @@ class SummonerColors(Enum):
     COMPLETED_2 = auto(),
     MONITOR_SELLER_SCROLL = auto(),
     CONFIRM_SELLER = auto(),
-    CONFIRM_MONITOR = auto()
+    CONFIRM_MONITOR = auto(),
+    INSUFFICIENT_ORBS = auto(),
+    MONSTER_BUY_AVAILABLE = auto()

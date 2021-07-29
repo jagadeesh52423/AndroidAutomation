@@ -13,4 +13,6 @@ class SummonerButtons(Enum):
     ORBS_CLOSE = auto(),
     COMPLETE_CONTINUE = auto(),
     NEW_GAME = auto(),
-    NEW_GAME_CONFIRM = auto()
+    NEW_GAME_CONFIRM = auto(),
+    UPGRADE_MONSTER = auto(),
+    CLOSE_UPGRADING = auto()

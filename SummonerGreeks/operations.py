@@ -17,11 +17,13 @@ class SummonerOperations:
             SummonerColors.COMPLETED_2: (253, 214, 68),
             SummonerColors.MONITOR_SELLER_SCROLL: (87, 195, 107),
             SummonerColors.CONFIRM_SELLER: (114, 178, 70),
-            SummonerColors.CONFIRM_MONITOR: (173, 105, 63)
+            SummonerColors.CONFIRM_MONITOR: (173, 105, 63),
+            SummonerColors.INSUFFICIENT_ORBS: (186, 182, 180),
+            SummonerColors.MONSTER_BUY_AVAILABLE: (66, 238, 166)
         }
         self.buttons = {
             SummonerButtons.ACHIEVEMENTS: (939, 190),
-            SummonerButtons.SELLER_BUY: (925, 1264),
+            SummonerButtons.SELLER_BUY: (934, 1275),
             SummonerButtons.SELLER_OKAY: (670, 1278),
             SummonerButtons.MONITOR_REJECT: (308, 1328),
             SummonerButtons.ACHIEVEMENTS_CLOSE: (994, 140),
@@ -29,7 +31,9 @@ class SummonerOperations:
             SummonerButtons.ORBS_CLOSE: (999, 78),
             SummonerButtons.COMPLETE_CONTINUE: (550, 1680),
             SummonerButtons.NEW_GAME: (541, 1526),
-            SummonerButtons.NEW_GAME_CONFIRM: (545, 2253)
+            SummonerButtons.NEW_GAME_CONFIRM: (545, 2253),
+            SummonerButtons.UPGRADE_MONSTER: (975, 2200),
+            SummonerButtons.CLOSE_UPGRADING: (1000, 2300)
         }
 
     def get_color(self, location, reason=None):
