@@ -30,10 +30,12 @@ class SummonerOperations:
             SummonerButtons.ORBS: (90, 320),
             SummonerButtons.ORBS_CLOSE: (999, 78),
             SummonerButtons.COMPLETE_CONTINUE: (550, 1680),
-            SummonerButtons.NEW_GAME: (541, 1526),
             SummonerButtons.NEW_GAME_CONFIRM: (545, 2253),
             SummonerButtons.UPGRADE_MONSTER: (975, 2200),
-            SummonerButtons.CLOSE_UPGRADING: (1000, 2300)
+            SummonerButtons.CLOSE_UPGRADING: (1000, 2300),
+            SummonerButtons.SETTINGS: (1022, 160),
+            SummonerButtons.MAP_SELECT: (227, 1135),
+            SummonerButtons.JOINT_REVENGE_HARD_MAP: (557, 1526)
         }
 
     def get_color(self, location, reason=None):

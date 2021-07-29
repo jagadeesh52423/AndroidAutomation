@@ -27,7 +27,7 @@ class SummonerGame:
             if self.operations.get_color(orbs_location, reason='orbs collection') == SummonerColors.ENABLED:
                 self.orbsPage()
                 time.sleep(1)
-                self.upgradeMonsterPage()
+                # self.upgradeMonsterPage()
 
             monitor_seller_banner_location = {'left': 140, 'top': 303, 'width': 1, 'height': 1}
             if self.operations.get_color(monitor_seller_banner_location, reason='seller-monitor check') == SummonerColors.MONITOR_SELLER_SCROLL:
@@ -36,6 +36,8 @@ class SummonerGame:
                 monitor_or_seller_confirmation = self.operations.get_color(monitor_seller_character_location, reason='confirm seller')
                 if monitor_or_seller_confirmation == SummonerColors.CONFIRM_SELLER:
                     self.sellerPage()
+                    time.sleep(1)
+                    self.start_new_game()
                 elif monitor_or_seller_confirmation == SummonerColors.CONFIRM_MONITOR:
                     self.monitorPage()
 
@@ -79,7 +81,7 @@ class SummonerGame:
         print("Congratulations on completing game!")
         time.sleep(0.5)
         print("Starting new game!")
-        self.operations.click_button(SummonerButtons.NEW_GAME)
+        self.operations.click_button(SummonerButtons.JOINT_REVENGE_HARD_MAP)
         time.sleep(1.5)
         print("Confirm new game!")
         self.operations.click_button(SummonerButtons.NEW_GAME_CONFIRM)
@@ -128,7 +130,17 @@ class SummonerGame:
         time.sleep(0.5)
         self.operations.click_button(SummonerButtons.ORBS_CLOSE)
         print("Closing Orbs page!")
-        pass
+
+    def start_new_game(self):
+        time.sleep(1)
+        print("Starting new game!")
+        self.operations.click_button(SummonerButtons.SETTINGS)
+        time.sleep(0.5)
+        self.operations.click_button(SummonerButtons.MAP_SELECT)
+        time.sleep(0.5)
+        self.operations.click_button(SummonerButtons.JOINT_REVENGE_HARD_MAP)
+        time.sleep(1.5)
+        self.operations.click_button(SummonerButtons.NEW_GAME_CONFIRM)
 
 
 if __name__ == '__main__':
