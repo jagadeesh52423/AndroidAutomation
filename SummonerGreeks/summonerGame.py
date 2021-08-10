@@ -15,19 +15,27 @@ class SummonerGame:
 
     def gamePage(self):
         while True:
-            achievements_location = {'left': 419, 'top': 147, 'width': 1, 'height': 1}
-            if self.operations.get_color(achievements_location, reason='achievements check') == SummonerColors.ENABLED:
-                self.achievementsPage()
+            # achievements_location = {'left': 419, 'top': 147, 'width': 1, 'height': 1}
+            # if self.operations.get_color(achievements_location, reason='achievements check') == SummonerColors.ENABLED:
+            #     self.achievementsPage()
 
             game_complete_check_location = {'left': 8, 'top': 67, 'width': 1, 'height': 1}
             if self.operations.get_color(game_complete_check_location, reason='game complete check') in [SummonerColors.COMPLETED, SummonerColors.COMPLETED_2]:
                 self.completePage()
-
-            orbs_location = {'left': 72, 'top': 189, 'width': 1, 'height': 1}
-            if self.operations.get_color(orbs_location, reason='orbs collection') == SummonerColors.ENABLED:
-                self.orbsPage()
+                time.sleep(1)
+                orbs_location = {'left': 72, 'top': 189, 'width': 1, 'height': 1}
+                if self.operations.get_color(orbs_location, reason='orbs collection') == SummonerColors.ENABLED:
+                    self.orbsPage()
+                time.sleep(1)
+                achievements_location = {'left': 419, 'top': 147, 'width': 1, 'height': 1}
+                if self.operations.get_color(achievements_location, reason='achievements check') == SummonerColors.ENABLED:
+                    self.achievementsPage()
                 time.sleep(1)
                 self.upgradeMonsterPage()
+
+            # orbs_location = {'left': 72, 'top': 189, 'width': 1, 'height': 1}
+            # if self.operations.get_color(orbs_location, reason='orbs collection') == SummonerColors.ENABLED:
+            #     self.orbsPage()
 
             monitor_seller_banner_location = {'left': 140, 'top': 303, 'width': 1, 'height': 1}
             if self.operations.get_color(monitor_seller_banner_location, reason='seller-monitor check') == SummonerColors.MONITOR_SELLER_SCROLL:
@@ -141,7 +149,7 @@ if __name__ == '__main__':
         quit()
 
     device = devices[0]
-    game = SummonerGame(device, 0)
+    game = SummonerGame(device, 8)
     game.start()
     # location = {'left': 405, 'top': 743, 'width': 1, 'height': 1}
     # print(game.operations.get_color(location))
